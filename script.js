@@ -89,7 +89,7 @@ function update() {
 
      //When the square colide with the food this changes the location, add 1 to the score and check the score to add
     if (squareX == foodX && squareY == foodY) {
-        placeFood(), addScoreValue(), checkObstacle();
+        placeFood(), addScoreValue(), checkScore(), checkFood();
     }
 
     //Game over
@@ -123,7 +123,7 @@ function update() {
 
 }
 
-    function checkObstacle() {
+    function checkScore() {
 
         if (score == 1) {
             return addObstacle1();
@@ -145,9 +145,59 @@ function update() {
             return addObstacle9();
         } else if (score == 10) {
             return addObstacle10();
+        } else if (score == 11) {
+            return addObstacle1();
+        } else if (score == 12) {
+            return addObstacle2();
+        } else if (score == 13) {
+            return addObstacle3();
+        } else if (score == 14) {
+            return addObstacle4();
+        } else if (score == 15) {
+            return addObstacle5();
+        } else if (score == 16) {
+            return addObstacle6();
+        } else if (score == 17) {
+            return addObstacle7();
+        } else if (score == 18) {
+            return addObstacle8();
+        } else if (score == 19) {
+            return addObstacle9();
+        } else if (score == 20) {
+            return addObstacle10();
+        } else if (score == 21) {
+            return addObstacle1();
+        } else if (score == 22) {
+            return addObstacle2();
+        } else if (score == 23) {
+            return addObstacle3();
+        } else if (score == 24) {
+            return addObstacle4();
+        } else if (score == 25) {
+            return addObstacle5();
+        } else if (score == 26) {
+            return addObstacle6();
+        } else if (score == 27) {
+            return addObstacle7();
+        } else if (score == 28) {
+            return addObstacle8();
+        } else if (score == 29) {
+            return addObstacle9();
+        } else if (score == 30) {
+            return addObstacle10();
         }
     }
 
+    function checkFood() {
+        while (foodX == obstacleX1 && foodY == obstacleY1 || foodX == obstacleX2 && foodY == obstacleY2
+                || foodX == obstacleX3 && foodY == obstacleY3 || foodX == obstacleX4 && foodY == obstacleY4
+                || foodX == obstacleX5 && foodY == obstacleY5 || foodX == obstacleX6 && foodY == obstacleY6
+                || foodX == obstacleX7 && foodY == obstacleY7 || foodX == obstacleX8 && foodY == obstacleY8
+                || foodX == obstacleX9 && foodY == obstacleY9 || foodX == obstacleX10 && foodY == obstacleY10
+        ) {
+            return placeFood();}
+        }
+        
   //Function to put some obstacle
 
   function addObstacle1() {
